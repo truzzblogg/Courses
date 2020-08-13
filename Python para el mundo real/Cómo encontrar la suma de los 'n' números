@@ -1,0 +1,75 @@
+#   =====================================================
+#   Sum of "n" numbers - Python Programming - TRUZZBLOGG
+#   Original Video: https://youtu.be/kE-JgH5d6Xs
+#   =====================================================
+
+#   What is the sum of numbers from 0 to n?
+#   For example:
+#   What is the sum of the first 100 whole numbers?
+
+# ****||****||****||****||****||****||****||
+# First Method: Using a given number (n)
+# ****||****||****||****||****||****||****||
+
+total = 0
+num = 10
+
+for i in range(0, num+1):
+    total = total + i
+
+# print using placeholder (old way)
+# print("The sum of numbers from 0 to %i is: %i" %(num,total))
+
+# print using format (modern way)
+print("The sum of numbers from 0 to {} is: {}".format(num,total))
+
+# ****||****||****||****||****||****||****||****||
+# Second Method: Using an input given by the user
+# ****||****||****||****||****||****||****||****||
+
+total = 0
+num = int(input("Please, enter a number:"))
+
+for i in range(0, num+1):
+    total = total + i
+
+# print using placeholder (old way)
+# print("The sum of numbers from 0 to %i is: %i" %(num,total))
+
+# print using format (modern way)
+print("The sum of numbers from 0 to {} is: {}".format(num,total))
+
+
+# ****||****||****||****||****||****||****||****||
+# Bonus 1: Making our code reusable - Function
+# ****||****||****||****||****||****||****||****||
+
+def sumOf(num):
+     total = 0
+
+     for i in range(1, num + 1):
+         total = total +i
+     return total
+print(sumOf(10))
+
+# ****||****||****||****||****||****||
+# Bonus 2: Using WHILE Loop
+# ****||****||****||****||****||****||
+
+n = 5
+total_n_sum = 0
+while (n >= 0):
+    total_n_sum += n
+    n-=1
+print ('Sum of "n" numbers using WHILE loop is: {} '.format(total_n_sum))
+
+
+# ****||****||****||****||****||****||****||
+# Bonus 3: Using Mathematical formula
+# ****||****||****||****||****||****||****||
+
+n = 10
+# Getting the 'n' value from the user (user input):
+# n = int(input("Please, enter a number:"))
+sum_n = (n * (n + 1)) / 2
+print ('Sum of "n" numbers using the Mathematical Formula is: {} '.format(sum_n))
