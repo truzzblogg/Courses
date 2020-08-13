@@ -1,0 +1,30 @@
+# Curso de Udemy: https://www.udemy.com/course/python-para-el-mundo-real/
+# Python para el mundo real!
+# Aprende Python realizando ejercicios y aplicaciones reales.
+
+# Old way
+classic_way = 48.947545
+print("Classic Way: %.3f" %classic_way)
+
+# Using .format()
+x = 73.946645
+print(float('{0:.4f}'.format(x)))
+print(float('{:.2f}'.format(x)))
+
+#  Using round method
+h = round(154.568877, 5)
+print(h)
+
+# Using format directly
+a = 13.55492223399
+print(format(a, '.5f'))
+
+# Modern Way: F-string (Python 3.6 or above)
+modern_way = 73.487255
+print(f"Modern Way: {modern_way:.4f}")
+
+# You can apply some of these methods with strings as well!
+str = 'Hello_TruzzBlogg'
+print("Classic STR: %.2s" % str)
+print('{0:.7s}'.format(str))
+print(format(str, '.6s'))
