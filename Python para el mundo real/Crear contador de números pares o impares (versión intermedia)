@@ -1,0 +1,25 @@
+# Curso de Udemy: https://www.udemy.com/course/python-para-el-mundo-real/
+# Python para el mundo real!
+# Aprende Python realizando ejercicios y aplicaciones reales.
+
+# Even / Odd numbers counter
+
+def even_odd_counter(max_arr, arr_values):
+  count_even = 0
+  count_odd = 0 
+
+  even_odd = []
+
+  for i in range(max_arr):
+    if(arr_values[i] % 2 == 0):
+      count_even += 1
+    else:
+      count_odd += 1
+  
+  even_odd.append(count_even)
+  even_odd.append(count_odd)
+
+  print(even_odd)
+  print("Even: {}  |  Odd: {} ".format(even_odd[0], even_odd[1]))
+
+even_odd_counter(6, [5, 2, 44, 4, 9, 12])
