@@ -1,0 +1,48 @@
+# Learn how to convert minutes to hours using Python Programming.
+# Python code used to convert minutes into hours. 
+# Curso de Udemy: https://www.udemy.com/course/python-para-el-mundo-real/
+# Python para el mundo real!
+# Aprende Python realizando ejercicios y aplicaciones reales.
+
+# ~~~~~~~~~~~~~~~~ #
+#  BASIC VERSION   #
+# ~~~~~~~~~~~~~~~~ #
+
+def timeConv (num):
+  minutes = num % 60
+  print ("Minutes: ", minutes)
+  hours = (num - minutes)/60
+  print ("Hours: ", hours)
+  result = str(hours) + " hours " + ": " + str(minutes) + " min. "
+  return result
+
+print (timeConv(566))
+
+# ~~~~~~~~~~~~~~~~~~~ #
+#  IMPROVED VERSION   #
+# ~~~~~~~~~~~~~~~~~~~ #
+
+def timeConv (num):
+  print ("You have entered the following number of minutes: ", num)
+  minutes = num % 60
+  print ("Minutes: ", minutes)
+  hours = (num - minutes)/60
+  print ("Hours: ", hours)
+  result = "{} is equivalent to : ".format(num) + str(hours) + " hours " + ": " + str(minutes) + " min. "
+  return result
+
+print (timeConv(566))
+
+# ~~~~~~~~~~~~~~~~~~~~ #
+#  GETTING USER INPUT  #
+# ~~~~~~~~~~~~~~~~~~~~ #
+
+num = int(input("Please, enter a number: "))
+print ("You have entered the following number of minutes: ", num)
+minutes = num % 60
+print ("Minutes: ", minutes)
+hours = (num - minutes)/60
+print ("Hours: ", hours)
+result = "{} is equivalent to : ".format(num) + str(hours) + " hours " + ": " + str(minutes) + " min. "
+
+print (result)
