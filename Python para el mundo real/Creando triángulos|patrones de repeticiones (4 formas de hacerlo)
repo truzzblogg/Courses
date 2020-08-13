@@ -1,0 +1,47 @@
+# Curso de Udemy: https://www.udemy.com/course/python-para-el-mundo-real/
+# Python para el mundo real!
+# Aprende Python realizando ejercicios y aplicaciones reales.
+
+#  ========================================================
+#  ***  Simple Patterns Repetitions Using Python Code  ****
+#  ***             Truzz Blogg Learning                ****
+#  ========================================================
+
+#  *************************
+#  Python Program number 1:
+#  *************************
+
+for i in range(10):
+    print (str(i)*i)
+       
+#  *************************
+#  Python Program number 2:
+#  *************************
+
+num = 10
+for i in range(num):
+    for j in range(i):
+        print ('* ', end="")
+    print ('.')
+    
+#  *************************
+#  Python Program number 3:
+#  *************************
+
+num = int(input("Enter the number of desired variations:"))
+for i in range (num + 1):
+    print ('* '*i)
+    
+#  *************************
+#  Python Program number 4:
+#  *************************
+
+num = 10
+for i in range(num):
+    for j in range(i):
+        print ('* ', end="")
+    print ('+')
+for i in range(num, 0, -1):
+    for j in range(i):
+        print ('* ', end="")
+    print ('-')
