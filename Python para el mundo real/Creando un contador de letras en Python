@@ -1,0 +1,14 @@
+# Curso de Udemy: https://www.udemy.com/course/python-para-el-mundo-real/
+# Python para el mundo real!
+# Aprende Python realizando ejercicios y aplicaciones reales.
+
+# Letter Counter --- Python
+
+print("Creating a LETTER COUNTER in Python!!! - Truzz Blogg")
+print("Let's create an application in Python that will count the number of times that a specific letter appears in your text/message!")
+user_input = str(input("Please, enter your text: ")).lower()
+letter_to_count = str(input("Which letter would you like to count?? ")).lower()
+
+letter_counting = user_input.count(letter_to_count)
+print("Your original message is: {} ".format(user_input))
+print("Your message has {} {}'s in it!!!".format(str(letter_counting), letter_to_count))
