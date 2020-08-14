@@ -1,0 +1,106 @@
+# Curso de Udemy: https://www.udemy.com/course/python-para-el-mundo-real/
+# Python para el mundo real!
+# Aprende Python realizando ejercicios y aplicaciones reales.
+
+# HOW TO REMOVE/DELETE VOWELS FROM A SENTENCE USING PYTHON PROGRAMMING
+
+# ==================== #
+# FIRST OPTION (BASIC)
+# ==================== #
+
+"""
+*****###*****###*****###*****###*****###*****###****************
+
+TRUZZ BLOGG - PYTHON PROGRAMMING
+
+How to remove vowels from your text.
+
+*****###*****###*****###*****###*****###*****###****************
+"""
+
+#Our first variable (alphabet)
+alphabet = ("a", "e", "i", "o", "u")
+
+# Let's get the user input
+user_in = input ("Please, enter your text: ")
+
+new_user_in = ""
+
+# Let's create a for loop
+for letters in user_in:
+    if letters not in alphabet:
+        new_user_in = new_user_in + letters
+
+# Let's present the user input without vowels
+print ("Your text without vowels is: {} ".format(new_user_in))
+print (len(new_user_in))
+
+# ======================== #
+# SECOND OPTION (IMPROVED)
+# ======================== #
+
+#Our first variable (alphabet)
+alphabet = ("a", "e", "i", "o", "u")
+
+# Let's get the user input
+user_in = input ("Please, enter your text: ")
+
+# Let's convert the user input to lowercase
+user_in = user_in.lower()
+# Let's show the original text
+print ("Your original text is: {} ".format(user_in))
+
+new_user_in = ""
+
+# Let's create a for loop
+for letters in user_in:
+    if letters not in alphabet:
+        new_user_in = new_user_in + letters
+
+# Let's present the user input without vowels
+print ("Your text without vowels is: {} ".format(new_user_in))
+print (len(new_user_in))
+
+# ===================== #
+#  =====  EXTRAS  =====
+# ===================== #
+
+# =================================== #
+# THIRD OPTION (without lower method)
+# =================================== #
+
+#Our first variable (alphabet)
+alphabet = ("a", "e", "i", "o", "u", "A", "E", "I", "O", "U")
+
+# Let's get the user input
+user_in = input ("Please, enter your text: ")
+
+# Let's show the original text
+print ("Your original text is: {} ".format(user_in))
+
+new_user_in = ""
+
+# Let's create a for loop
+for letters in user_in:
+    if letters not in alphabet:
+        new_user_in = new_user_in + letters
+
+# Let's present the user input without vowels
+print ("Your text without vowels is: {} ".format(new_user_in))
+print (len(new_user_in))
+
+# ========================================================================== #
+# FOURTH OPTION (Let's define a function and then, let's call that function)
+# ========================================================================== #
+
+def remove_vowels(fn_para):
+	alphabet = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]
+	new_user_in = ""
+
+	for letters in fn_para:
+		if letters not in alphabet:
+			new_user_in = new_user_in + letters
+	return new_user_in
+
+# Let's call the function
+print (remove_vowels("Hello Youtube. I am TRUZZBLOGG")) #Output: Hll Ytb.  m TRZZBLGG
