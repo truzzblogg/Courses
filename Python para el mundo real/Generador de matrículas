@@ -1,0 +1,25 @@
+# Create a simple Car License Plate Generator
+# License Plate Format in Spain: 1234 ABC
+# Curso de Udemy: https://www.udemy.com/course/python-para-el-mundo-real/
+# Python para el mundo real!
+# Aprende Python realizando ejercicios y aplicaciones reales.
+
+import random
+
+alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+numbers = '0123456789'
+total_licenses = 100
+
+for i in range(total_licenses):
+  # Generate random numbers
+  num1 = random.choice(numbers)
+  num2 = random.choice(numbers)
+  num3 = random.choice(numbers)
+  num4 = random.choice(numbers)
+   # Generate random letters
+  letter1 = random.choice(alphabet)
+  letter2 = random.choice(alphabet)
+  letter3 = random.choice(alphabet)
+  print("{}{}{}{} - {}{}{}".format(num1,num2,num3,num4,letter1,letter2,letter3))
+  # You can also use F-String, if you want (that's more 'Pythonic')
+  print(f"{num1}{num2}{num3}{num4} - {letter1}{letter2}{letter3}")
