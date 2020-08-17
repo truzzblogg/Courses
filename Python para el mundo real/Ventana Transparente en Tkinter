@@ -1,0 +1,25 @@
+# Truzz Blogg Learning - How to create a Python GUI with transparent effect
+# Curso de Udemy: https://www.udemy.com/course/python-para-el-mundo-real/
+# Python para el mundo real!
+# Aprende Python realizando ejercicios y aplicaciones reales.
+
+import tkinter as tk
+
+# create a new instance - class Tk()
+
+mywindow = tk.Tk()
+
+# Let's create a title and some text
+
+mywindow.title("Python + Tkinter GUI")
+mywindow.geometry("600x400")
+mywindow.resizable(False,False)
+mywindow.config(background = "#3b98FA")
+main_title = tk.Label(text = "Python + Tkinter - Transparent Window - Truzz Blogg", font = ("Tahoma", 14), bg = "#ff7763", fg = "black", width = "60", height = "4")
+main_title.place(x = 0, y = 10)
+mywindow.wm_attributes("-alpha", 0.3)
+
+
+# Let's launch the application --- (preventing closing using mainloop method)
+
+mywindow.mainloop()
