@@ -1,0 +1,54 @@
+#  =================================================================
+#  Create your first Graphical User Interface using Python + Tkinter
+#  Version 1 (Basic)
+# Curso de Udemy: https://www.udemy.com/course/python-para-el-mundo-real/
+# Python para el mundo real!
+# Aprende Python realizando ejercicios y aplicaciones reales.
+#  =================================================================
+
+# Let's import tkinter 
+import tkinter as tk
+
+# Create instance
+mywindow = tk.Tk()
+
+# Let's create our title
+mywindow.title("Python TRUZZBLOGG GUI")
+mywindow.geometry("400x200")
+#mywindow.resizable(False,False)
+
+# Launch the application (preventing closing: mainloop method)
+mywindow.mainloop()
+
+
+
+#  =================================================================
+#  Create your first Graphical User Interface using Python + Tkinter
+#  Version 2
+# Curso de Udemy: https://www.udemy.com/course/python-para-el-mundo-real/
+# Python para el mundo real!
+# Aprende Python realizando ejercicios y aplicaciones reales.
+#  =================================================================
+
+# Let's import tkinter + messagebox
+import tkinter as tk
+from tkinter import messagebox
+# You can also try the next sentence:
+# import tkinter.messagebox
+
+# Create instance
+myWindow = tk.Tk()
+myWindow.title(" Buttons and Message Boxes - TRUZZBLOGG")
+myWindow.geometry("400x400")
+
+# Create a function to manage dialog box we are going to generate
+def myMessage():
+   messagebox.showinfo("Question!!!", "My question is... ")
+
+# Create a button
+btn1 = tk.Button(myWindow, text = "1st Button", command = myMessage)
+#btn1.pack()
+btn1.place(x=75, y=50)
+
+# Launch the application (preventing closing: mainloop method)
+myWindow.mainloop()
