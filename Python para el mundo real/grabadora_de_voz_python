@@ -1,0 +1,54 @@
+# Recording your own voice in Python: How to create a "Voice Recorder" application using Python Code.
+# Creando una grabadora de voz en Python - TruzzBlogg Learning - Cursos para mentes inquietas
+# Curso de Udemy: https://www.udemy.com/course/python-para-el-mundo-real/
+# Python para el mundo real!
+# Aprende Python realizando ejercicios y aplicaciones reales.
+
+
+import sounddevice as sd
+from scipy.io.wavfile import write
+import time
+
+# ********* #
+# Method 1:
+# ********* #
+
+# standard sample rate: 44.1 KHZ  (Or 48.0 KHZ)
+fs = 44100
+# fs = 48000
+
+# Recording duration: 12 secs
+secs = 12
+print("Starting the recording software...Please wait!")
+waiting = time.sleep(1.5)
+print("Recording! Say Something...")
+
+voice_record = sd.rec(int(secs * fs), samplerate = fs, channels = 2)
+sd.wait()
+
+# Creating the wav file
+write("output.wav", fs, voice_record)
+
+
+# ******************************************************* #
+# Method 2: Using default.samplerate and default.channels
+# ******************************************************* #
+
+# standard sample rate: 44.1 KHZ  (Or 48.0 KHZ)
+fs = 44100
+# fs = 48000
+
+# Recording duration: 12 secs
+secs = 12
+print("Starting the recording software...Please wait!")
+waiting = time.sleep(1.5)
+print("Recording! Say Something...")
+
+sd.default.samplerate = fs
+sd.default.channels = 2
+
+voice_record = sd.rec(int(secs * fs))
+sd.wait()
+
+# Creating the wav file
+write("output.wav", fs, voice_record)
