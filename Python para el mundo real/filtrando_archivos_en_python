@@ -1,0 +1,30 @@
+import os
+
+# ********* #
+# Method 1:
+# ********* #
+
+main_path = "D:\\PROGRAMMING\\Test\\"
+listing_files = os.listdir(main_path)
+print(listing_files)
+
+for item in listing_files:
+    if item.endswith(".vtt"):
+        print("Vtt file found!")
+        print(item)
+
+# ********************************** #
+# Method 2: Using List Comprehension
+# ********************************** #
+
+# main_path = "D:\\PROGRAMMING\\Test\\"
+# listing_files = os.listdir(main_path)
+# print(type(listing_files))
+# print("All FILES: ", listing_files)
+#
+# filtered_files = [file for file in listing_files if file.endswith(".vtt")]
+# print(filtered_files)
+#
+# for item in filtered_files:
+#     print(item)
+
