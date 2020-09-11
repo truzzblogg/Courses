@@ -1,0 +1,42 @@
+# Curso de Udemy: https://www.udemy.com/course/python-para-el-mundo-real/
+# Python para el mundo real!
+# Aprende Python realizando ejercicios y aplicaciones reales.
+# Calculando el incremento de salario de una empresa
+
+# ********************************************************** #
+# Version 1: : Let's calculate your percentage of pay raise!
+# ********************************************************** #
+
+# final_salary = 0
+# salary = input("Enter your salary: ")
+# anual_raise = input("Percentage of pay raise(%) : ")
+# final_salary = int(salary)+(int(salary)*int(anual_raise)/100)
+# print("Your Final Salary will be: ",final_salary)
+
+# ********************************************************** #
+# Version 2: : Let's calculate your percentage of pay raise!
+# ********************************************************** #
+
+def new_salary():
+    print("Tech Groups --- GROUP 1: Junior(3%)  |  GROUP 2: Senior(10%)  |  GROUP 3: Arquitect(15%)")
+    yourchoice = int(input('Which is your group?\n1: Junior \n2: Senior \n3: Arquitect \nEnter your group: '))
+    if yourchoice == 1:
+        salary = input("Enter your salary: ")
+        anual_raise = 3
+        final_salary = int(salary) + (int(salary) * int(anual_raise) / 100)
+        print("Next year, your Final Salary will be: ", final_salary)
+    elif yourchoice == 2:
+        salary = input("Enter your salary: ")
+        anual_raise = 10
+        final_salary = int(salary) + (int(salary) * int(anual_raise) / 100)
+        print("Next year, your Final Salary will be: ", final_salary)
+    elif yourchoice == 3:
+        salary = input("Enter your salary: ")
+        anual_raise = 15
+        final_salary = int(salary) + (int(salary) * int(anual_raise) / 100)
+        print("Next year, your Final Salary will be: ", final_salary)
+    else:
+        print('\nInvalid choice. Please select a valid group! \n')
+        new_salary()
+
+new_salary()
