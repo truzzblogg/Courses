@@ -1,0 +1,34 @@
+# Curso de Udemy: https://www.udemy.com/course/python-para-el-mundo-real/
+# Python para el mundo real!
+# How to get my own IP Address (Private + Public IP)
+
+# Python Programming - Get my Ip Address
+
+# Method 1 - Python Programming - Getting my Private IP Address (Internal IP Address)
+
+import socket
+
+Let's extract the hostname
+
+hostname = socket.gethostname()
+
+Let's extract the IP address
+
+ip_address1 = socket.gethostbyname(hostname)
+ip_address2 = socket.getaddrinfo("google.com", 80)
+
+print("My Hostname is: {} ".format(hostname))
+print("My Internal Ip Address is: {} ".format(ip_address1))
+print(f"My Hostname is {hostname}")
+print(f"My Internal Ip Address is: {ip_address1}")
+print(f"Google Ip Address is: {ip_address2}")
+
+# Method 2 - Python Programming - Getting External IP Address (Public IP Address)
+
+import urllib.request
+
+external_ip = urllib.request.urlopen('https://ident.me').read().decode('utf8')
+# Simple print
+print(external_ip)
+# Complete info on print
+print("My External Ip Address is: {} ".format(external_ip))
