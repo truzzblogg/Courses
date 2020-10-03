@@ -1,0 +1,14 @@
+// How to count the number of occurrences of a character in a string
+// Udemy course: Javascript para el mundo real!
+// https://www.udemy.com/course/javascript-para-el-mundo-real/
+
+let user_in = prompt("Enter your text: ");
+// You can define your own text entry!
+// user_in = 'My original texxxxxt is juxt here! Take a lxxk atx thatx!';
+let myChar = 'x';
+countLetter = 0;
+for(let i = 0; i < user_in.length; i++){
+  if(user_in.charAt(i) === myChar){
+    countLetter++;
+  }
+}
