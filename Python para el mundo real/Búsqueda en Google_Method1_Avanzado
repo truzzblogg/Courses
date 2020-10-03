@@ -1,0 +1,32 @@
+# How to perform a Google search using Python code - Method 1 - Advanced
+# Cómo realizar búsquedas en Google usando Python - Método 1 - Avanzado
+# Curso de Udemy: https://www.udemy.com/course/python-para-el-mundo-real/
+# Python para el mundo real!
+# Aprende Python realizando ejercicios y aplicaciones reales.
+
+
+from googlesearch import search
+
+google_query = str(input("Please, enter your Google search term: "))
+# google_query = "Free Hosting Online"
+
+google_terms = []
+for i in search(google_query, start = 0, stop = 30, num = 5, pause = 2):
+    print(i)
+    google_terms.append(i)
+
+# Let's store the results on a .txt file  ---  Method 1
+my_file = open('google_search_on_python.txt', 'w', encoding='utf-8')
+my_file.write("Your Original Search Term is: {} \n".format(google_query))
+for element in google_terms:
+    my_file.write(element + '\n')
+
+my_file.close()
+
+# ***************
+# Let's store the results on a .txt file --- Method 2
+
+# with open('google_search_2_on_python.txt', 'w', encoding='utf-8') as my_file2:
+#     my_file2.write("Your Original Search Term is: {} \n".format(google_query))
+#     for i in google_terms:
+#         my_file2.write(i + '\n')
