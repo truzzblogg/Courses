@@ -1,0 +1,34 @@
+# Curso de Udemy: https://www.udemy.com/course/python-para-el-mundo-real/
+# Python para el mundo real!
+# Aprende Python realizando ejercicios y aplicaciones reales.
+
+# Write a program that accepts a series of words (comma separated words) as input and prints out words
+# after removing all duplicate words and sorting them alphabetically.
+
+user_input = input("Enter your comma separated sequence: ")
+
+lst_sequence = [words.strip() for words in user_input.split(",")]
+
+print(type(lst_sequence))
+print(lst_sequence)
+
+final_res = " ".join(sorted(list(set(lst_sequence))))
+print(final_res)
+
+
+
+# You can also use the method lower() in the List Comprehension to take care of Lower Cases or Capital Letters on your code
+
+
+# Write a program that accepts a series of words (comma separated words) as input and prints out words
+# after removing all duplicate words and sorting them alphabetically.
+
+user_input = input("Enter your comma separated sequence: ")
+
+lst_sequence = [words.strip().lower() for words in user_input.split(",")]
+
+print(type(lst_sequence))
+print(lst_sequence)
+
+final_res = " ".join(sorted(list(set(lst_sequence))))
+print(final_res)
