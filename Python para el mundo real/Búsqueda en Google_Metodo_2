@@ -1,0 +1,11 @@
+# Curso de Udemy: https://www.udemy.com/course/python-para-el-mundo-real/
+# Python para el mundo real!
+# Aprende Python realizando ejercicios y aplicaciones reales.
+# How to perform a google search using Python code
+
+import webbrowser
+
+user_query = input("Enter your search term: ")
+url = "https://www.google.com.br/?lr=lang_pt&cr=BR&gws_rd=cr&ssl&ei=Wq2BX4ayKNGIjLsP-eyr-A8&q=%s" % user_query
+
+webbrowser.open_new(url)
