@@ -1,0 +1,19 @@
+// Código Javascript - Documento JS: main.js
+
+// document.getElementById("myid_01").innerHTML = "Este párrafo ha sido cambiado";
+
+
+function changeText() {
+	document.getElementById("myid_01").innerHTML = "Párrafo cambiado desde una función";
+
+}
+
+function inSpanish() {
+	document.getElementById("myid_02").innerHTML = "Texto escrito en español";
+
+}
+
+function inEnglish() {
+	document.getElementById("myid_03").innerHTML = "Text written in English";
+
+}
