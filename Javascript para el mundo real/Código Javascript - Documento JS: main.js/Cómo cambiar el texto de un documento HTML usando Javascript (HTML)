@@ -1,0 +1,29 @@
+<!-- Parte inicial - Documento HTML: main.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+
+<body>
+	<h1>Estamos trabajando con JavaScript!</h1>
+	<p id="myid_01">Mi primer párrafo!!!</p>
+	<div>
+		<p id="myid_02">Español!</p>
+	</div>
+	<div>
+		<p id="myid_03">English!</p>
+	</div>
+	<button type="button" onclick="changeText()">Click aquí!</button>
+	<button type="button" onclick="inSpanish()">Quiero texto en español!</button>
+	<button type="button" onclick="inEnglish()">Wanna English Text!</button>
+
+
+
+<script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>
