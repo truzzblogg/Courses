@@ -1,0 +1,28 @@
+# Curso de Udemy: https://www.udemy.com/course/python-para-el-mundo-real/
+# Python para el mundo real!
+# Aprende Python realizando ejercicios y aplicaciones reales.
+
+# Method 1:
+
+red = int(input("Enter the red color: "))
+green = int(input("Enter the green color: "))
+blue = int(input("Enter the blue color: "))
+
+if ((red >= 0 and red <= 255) and (green >= 0 and green <= 255) and (blue >= 0 and blue <= 255)):
+
+# .format()
+# 02 --> use at least 2 digits and to use zeros to pad it to length
+# x --> lower-case hexadecimal
+    hex_color = '#{:04x}{:02x}{:02x}'.format(red, green, blue)
+    print('A HEX Value using format :', hex_color)
+
+    # Old Way
+    hexa = '#%02x%02x%02x' % (red, green, blue)
+    print("Your Hexadecimal Value using the old way is: ", hexa)
+
+    # f-string - Python 3.6
+    rgb = [red, green, blue]
+    rgb_fstring = f'#{rgb[0]:02x}{rgb[1]:02x}{rgb[2]:02x}'
+    print("Desde FSTRING con amor: ", rgb_fstring)
+else:
+    print("You entered an invalid number! Bye!")
