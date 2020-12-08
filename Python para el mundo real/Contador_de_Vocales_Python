@@ -1,0 +1,39 @@
+# How to count the number of vowels in na sentence
+
+def count_vowels(main_txt):
+    vowels = "aeiou"
+    count = 0
+        
+    for i in range(len(main_txt)):
+        char_i = main_txt.lower()[i]
+        print(char_i)
+        
+        if char_i in vowels:
+            count += 1
+            final += char_i
+    
+    return f"The number of vowels in the sentence is: {count}"
+        
+print(count_vowels("Hi there, How are you today"))
+
+
+
+# Another Version:
+# How to count the number of vowels in na sentence
+
+def count_vowels(main_txt):
+    vowels = "aeiou"
+    count = 0
+    final = ''
+    
+    for i in range(len(main_txt)):
+        char_i = main_txt.lower()[i]
+        print(char_i)
+        
+        if char_i in vowels:
+            count += 1
+            final += char_i
+    
+    return f"The number of vowels in the sentence is: {count} | List of Vowels: {final}"
+        
+print(count_vowels("Hi there, How are you today"))
