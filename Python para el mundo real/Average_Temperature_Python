@@ -1,0 +1,30 @@
+# How to calculate Average Temperature in Python
+# Curso de Udemy: https://www.udemy.com/course/python-para-el-mundo-real/
+# Python para el mundo real!
+# Aprende Python realizando ejercicios y aplicaciones reales.
+
+# How many values of temperature would you like to type?
+all_days = int(input("How many day's temperature: "))
+total = 0
+temp = []
+
+# Getting temperature values from user
+for i in range(all_days):
+    next_day = int(input(f"High Temperature for day {(i + 1)}: "))
+    temp.append(next_day)
+    total += temp[i]
+
+# Calculate Average Temperature
+average_temp = round(total/all_days, 2)
+print("Average Temperature: {}".format(average_temp))
+
+above_counter = 0
+lst_nums_above = []
+
+# Which number is above the average temperature?
+for x in temp:
+    if x > average_temp:
+        lst_nums_above.append(x)
+        above_counter += 1
+
+print(f"{above_counter} days above average: {lst_nums_above}")
