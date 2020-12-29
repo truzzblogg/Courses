@@ -1,0 +1,22 @@
+# How to create business email using Python
+
+# Bill Gates | Microsoft
+# bill.gates@microsoft.com
+
+# Mark Zuckerberg | Facebook
+# mark.zuckerberg@facebook.com
+
+# Asking for user information (First Name, Last Name, Company)
+f_name = input("Enter your first name: ").lower()
+l_name = input("Enter your last name: ").lower()
+company = input("Enter company name: ").lower()
+
+# Remove space in double names
+f_name = '.'.join(f_name.split())
+l_name = '.'.join(l_name.split())
+# company = '.'.join(company.split())
+
+# Showing the email + Removing space in double names (company)
+email = f'{f_name}.{l_name}@{company}.com'
+email = email.replace(' ', '')
+print(email)
