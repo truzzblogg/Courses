@@ -1,0 +1,26 @@
+# Curso de Udemy: https://www.udemy.com/course/python-para-el-mundo-real/
+# Python para el mundo real!
+# Aprende Python realizando ejercicios y aplicaciones reales.
+# How to separate each digit in a given number
+# For example: "75639"  -->  [7, 5, 6, 3, 9]
+
+# How to separate each digit of a number:
+# For example: 47902  -->  [4, 7, 9, 0, 2]
+
+# Method 1
+lst = []
+def string_int(my_data):
+    for i in my_data:
+        lst.append(int(i))
+    print(lst)
+
+user_input = input("Enter a number: ")
+string_int(user_input)
+
+# Method 2
+def string_int(txt):
+     num_int = [int(i) for i in txt]
+     print(num_int)
+
+user_in = input("Enter a number: ")
+string_int(user_in)
