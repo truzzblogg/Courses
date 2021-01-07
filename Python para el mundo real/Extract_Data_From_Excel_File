@@ -1,0 +1,27 @@
+# How to extract all emails from an Excel file
+# Curso de Udemy: https://www.udemy.com/course/python-para-el-mundo-real/
+# Python para el mundo real!
+# Aprende Python realizando ejercicios y aplicaciones reales
+
+# pip install pandas   |   pip install openpyxl
+import pandas as pd
+
+# Reading Excel File
+data = pd.read_excel("emails_excel.xlsx")
+# print(data.__str__())
+# Getting data from the 'Email' Column
+get_email = data.get("Email")
+list_emails = list(get_email)
+print(list_emails)
+
+# Save the data (emails) in a .txt file
+# with open ("getting_data.txt", "w") as f1:
+#     for item in list_emails:
+#         f1.write(item + "\n")
+
+# Another method to open/write files
+f = open("my_emails.txt", "w")
+for item in list_emails:
+    f.write(item + "\n")
+
+f.close()
