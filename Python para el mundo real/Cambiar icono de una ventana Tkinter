@@ -1,0 +1,11 @@
+import tkinter as tk
+from tkinter import *
+
+my_window = tk.Tk()
+my_window.title("How to add an Icon - Tkinter")
+my_window.geometry("400x180")
+my_window.resizable(False, False)
+my_window.config(background = '#1f2f85')
+my_window.iconbitmap('C:\\Users\\rickg\\Downloads\\facebook_logo_yt.ico')
+
+my_window.mainloop()
