@@ -1,0 +1,25 @@
+# Curso de Udemy: https://www.udemy.com/course/python-para-el-mundo-real/
+# Python para el mundo real!
+# Aprende Python realizando ejercicios y aplicaciones reales.
+
+# Method 1:
+import time
+
+def run_again():
+    num = 0
+    while num < 10:
+        print("Run it 10 times!")
+        time.sleep(3)
+        num += 1
+
+run_again()
+
+# Method 2:
+import threading
+
+
+def update():
+    threading.Timer(2.0, update).start()
+    print("Hello Internet!!")
+
+update()
