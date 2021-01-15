@@ -1,0 +1,35 @@
+# Method 1 - Negative Index:
+for i in range(100,0,-1) :
+    print(i)
+    
+# Method 2 - While Loop
+counter = 100
+
+while counter > 0:
+  print(counter)
+  counter -= 1
+  
+# Method 2.1 - While Loop + if
+counter = 100
+
+while counter >= 0:
+  if counter > 0:
+    print(counter)
+  if counter == 0:
+    print("This is the end!!!")
+  counter -= 1
+  
+# Method 3 - Using !=
+
+counter = 100
+
+while counter >= 0:
+  if counter != 0:
+    print(counter)
+  else:
+    print("This is the end!!!")
+  counter -= 1
+
+Bonus - Method 4 - Using Built-in Method 'reversed':
+for i in reversed(range(1,101)) :
+    print(i)
