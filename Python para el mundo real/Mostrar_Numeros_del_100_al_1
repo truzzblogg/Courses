@@ -1,3 +1,8 @@
+# Display all numbers from 100 to 1
+# Curso de Udemy: https://www.udemy.com/course/python-para-el-mundo-real/
+# Python para el mundo real!
+# Aprende Python realizando ejercicios y aplicaciones reales.
+
 # Method 1 - Negative Index:
 for i in range(100,0,-1) :
     print(i)
