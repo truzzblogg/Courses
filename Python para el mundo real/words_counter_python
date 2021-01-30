@@ -1,0 +1,48 @@
+# Curso de Udemy: https://www.udemy.com/course/python-para-el-mundo-real/
+# Python para el mundo real!
+# Aprende Python realizando ejercicios y aplicaciones reales.
+# How to create a "Words Counter" using Python
+
+# Method 1 - Simple version:
+query = "Hi John How are you today John are you ok John ?"
+my_text = query.split()
+counting_words = {}
+counter = 0
+
+for i in range(0, len(my_text)):
+    firstword = my_text[i]
+    # print(firstword)
+    for k in range(0, len(my_text)):
+        secword = my_text[k]
+        # print("Second word ", secword)
+        if firstword == secword:
+            counter += 1
+    counting_words[firstword] = counter
+    counter = 0
+print(counting_words)
+
+
+# Method 2 - Making the source code reusable using a function
+# Words counter in Python
+
+def words_counter(query):
+# query = "Hi Mike how are you today Mike tell me are you ok Mike ?"
+    my_txt = query.split(" ")
+    counting_words = {}
+    counter = 0
+
+    for i in range(0, len(my_txt)):
+        firstword = my_txt[i]
+        # print(firstword)
+        for k in range(0, len(my_txt)):
+            secword = my_txt[k]
+            # print("Second Loop: ", secword)
+            if firstword == secword:
+                counter += 1
+        counting_words[firstword] = counter
+        counter = 0
+
+    return counting_words
+
+all_words = words_counter("Hi John how are you today Mike tell me are you ok John ?")
+print(all_words)
