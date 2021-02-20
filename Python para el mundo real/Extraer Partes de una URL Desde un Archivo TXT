@@ -1,0 +1,22 @@
+# Curso de Udemy: https://www.udemy.com/course/python-para-el-mundo-real/
+# Python para el mundo real!
+# Aprende Python realizando ejercicios y aplicaciones reales.
+# ***********************************************************
+# Python Programming - Extract information from a URL
+
+f = open('user_urls.txt', 'r')
+domain = open('main_domain.txt', 'w')
+extra_data = open('url_data.txt', 'w')
+
+get_domain = " ".join(f.readline().split('/')[2:3])
+print(type(get_domain))
+print(get_domain)
+domain.write(get_domain)
+
+for line in f:
+    extra_data.write(" ".join(line.split('/')[-2:-1]))
+    extra_data.write('\n')
+
+f.close()
+domain.close()
+extra_data.close()
