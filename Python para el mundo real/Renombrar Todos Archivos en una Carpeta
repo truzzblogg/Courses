@@ -1,0 +1,18 @@
+# Curso de Udemy: https://www.udemy.com/course/python-para-el-mundo-real/
+# Python para el mundo real!
+# Aprende Python realizando ejercicios y aplicaciones reales.
+
+import os
+
+os.chdir("D:\\PROGRAMMING\\3-Python\\Udemy_course\\Rename_Files")
+increment = 1
+
+for i in os.listdir():
+    file_name, file_ext = os.path.splitext(i)
+    # print(f'File Name: {file_name} | File Extension: {file_ext}')
+
+    new_file_name = f'{str(increment)} - S.O.A.D - {file_name}{file_ext}'
+    increment += 1
+
+    print(f'Changing file name: {i} to: {new_file_name}')
+    os.rename(i, new_file_name)
