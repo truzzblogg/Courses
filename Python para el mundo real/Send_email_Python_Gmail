@@ -1,0 +1,26 @@
+# Automation in Python - How to send an email using Gmail
+# Curso de Udemy: https://www.udemy.com/course/python-para-el-mundo-real/
+# Python para el mundo real!
+# Aprende Python realizando ejercicios y aplicaciones reales.
+
+import smtplib
+sender = "myemail@gmail.com"
+receiver = "destinationemail@gmail.com"
+password = "123456abc"
+subject = "Learning to send email using Python"
+body = "Ohhh Yeahhh! This email is coming from my Python program...OMG!!!"
+
+message = f""" From: TruzzBlogg{sender}
+To: Donald Trump{receiver}
+Subject: {subject}
+{body}
+"""
+try:
+    connection = smtplib.SMTP("smtp.gmail.com", 587)
+    connection.starttls()
+    connection.login(sender, password)
+    print("Success! Logged In!!!")
+    connection.sendmail(sender, receiver, message)
+    print("Ok! Email sent!")
+except smtplib.SMTPAuthenticationError:
+    print("Error! Fix the error and try again!")
