@@ -1,0 +1,24 @@
+# BMI - PYTHON  ---  BMI = Body Mass Index (Índice de masa corporal)
+
+# Created by Truzz Blogg
+# Udemy Course: https://www.udemy.com/course/python-para-el-mundo-real/
+
+def bmi_python():
+    height = input("How tall are you? ")
+    weight = input("How much do you weight? ")
+
+    bmi_formula = (int(weight) / (int(height)/100)**2)
+
+    # print("Your bmi is {}".format(round(bmi_formula, 2)))
+    print(f"Your bmi is {round(bmi_formula, 2)}")
+
+    if bmi_formula < 18.5:
+        print("Bmi < 18.5 --- You are so skinny! Eat more!")
+    elif bmi_formula >= 18.5 and bmi_formula <= 24.9:
+        print ("Good job!!! keep it up!")
+    elif bmi_formula >= 25 and bmi_formula <= 29.9:
+        print ("You're fat! Be aware! Do more exercises!!!")
+    else:
+        print("Bmi >= 30 - You are obese! Visit your doctor!")
+
+bmi_python()
