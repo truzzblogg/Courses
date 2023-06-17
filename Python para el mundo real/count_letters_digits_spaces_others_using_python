@@ -1,0 +1,22 @@
+# Created by Truzz Blogg
+# Udemy Course: https://www.udemy.com/course/python-para-el-mundo-real/
+
+x = "Nunca vas a obtener resultados diferentes si haces siempre lo mismo! Mira el mundo desde otra perspectiva!!! 100$ / 2 = 50$ €#&% :-)"
+
+letters = 0
+digit = 0
+space = 0
+other = 0
+
+for i in x:
+    if i.isalpha():
+        letters += 1
+    elif i.isnumeric():
+        digit += 1
+    elif i.isspace():
+        space += 1
+    else:
+        other += 1
+
+print(f"Original Text: {x}")
+print(f"Letters: {letters} | Digits: {digit} | Spaces: {space} | Others: {other}")
