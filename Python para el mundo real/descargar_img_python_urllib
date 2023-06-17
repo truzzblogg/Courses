@@ -1,0 +1,27 @@
+# Created by Truzz Blogg
+# Udemy Course: https://www.udemy.com/course/python-para-el-mundo-real/
+
+from urllib.request import urlopen, HTTPError, URLError
+import time
+
+# Images to download
+img_url = "https://www.autocar.co.uk/sites/autocar.co.uk/files/styles/body-image/public/1-corvette-stingray-c8-2019-fd-hr-hero-front_0.jpg"
+# img_url = "https://www.analyticsinsight.net/wp-content/uploads/2022/12/How-Generative-AI-is-About-to-Make-Your-Job-Obsolete-in-the-Next-Decade.jpg"
+
+# Get current time
+time_now = time.time()
+
+try:
+    img = urlopen(img_url).read()
+    
+    # We have to open the image in binary mode "wb" (mp3, jpg, pdf, etc ··> are binary files)
+    open("./sample_img/my_image.jpg", "wb").write(img)
+    
+    print("Okk...image saved!")
+    print("Image saved in just: " + str(time.time() - time_now) + " secs...")
+
+# Simple Error Validation
+except HTTPError:
+    print("HTTP Error: Image not available")
+except URLError:
+    print("URL Error: Image can not be downloaded!!!")
